@@ -20,8 +20,13 @@ def main():
     ## decode JSON to Python data structure
     apod = json.loads(apodread.decode("utf-8"))
 
-    ## display our Pythonic data
-    print(apod)
-
+    ## display 10 Questions Need to figure out how to just print one Question and getting user answers and telling them if it is correct will probably do it in vs code
+    i=0
+    while i<10:
+     print(("Question - ") + apod["results"][i]["question"])
+     print("True")
+     print("False" + "\n")
+     i += 1
+    
 if __name__ == "__main__":
     main()
